@@ -3,7 +3,7 @@
 
 ### Getting Started
 
-Clone this code
+Clone this repo
 
 Run `npm install` This will also install subprojects
 

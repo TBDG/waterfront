@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "nodemon src/index.js --inspect",
+    "start:dev": "forever --id \"waterfront\" start ./index.js",
     "start:prod": "node src/index.js"
   },
   "author": "",

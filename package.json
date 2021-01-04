@@ -8,7 +8,7 @@
     "start": "concurrently npm:start:*",
     "start:public": "cd ./public && npm start",
     "start:server": "cd ./server && npm start",
-    "start:dev": "cd ../server && npm run start:dev",
+    "start:dev": "cd ./server && npm run start:dev",
     "start:prod": "cd ./server && npm run start:prod",
     "setup:public": "cd ./public && npm i",
     "setup:server": "cd ./server && npm i",

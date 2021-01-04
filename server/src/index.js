@@ -1,14 +1,14 @@
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 const express = require('express');
-
+const path = require('path')
 
 // Parsing .env file
 const env = {};
-Object.entries(dotenv.config({path: '../.env'}).parsed).map(([key, value]) => {
+Object.entries(dotenv.config({path: path.join(__dirname, '..', '.env')}).parsed).map(([key, value]) => {
     (() => {
-        if(value.toLowerCase() === 'true') return value = true;
-        if(value.toLowerCase() === 'false') return value = false;
-        if(!isNaN(parseFloat(value))) return value = parseFloat(value);
+        if (value.toLowerCase() === 'true') return value = true;
+        if (value.toLowerCase() === 'false') return value = false;
+        if (!isNaN(parseFloat(value))) return value = parseFloat(value);
     })()
 
     env[key] = value
@@ -17,7 +17,7 @@ Object.entries(dotenv.config({path: '../.env'}).parsed).map(([key, value]) => {
 
 const app = express();
 
-if(env.PROD) {
+if (env.PROD) {
     app.use(express.static('pub-build'))
 }
 

@@ -3,8 +3,9 @@ const express = require('express');
 const path = require('path')
 
 // Parsing .env file
+const envPath = path.join(__dirname, '..', '..', '.env');
 const env = {};
-Object.entries(dotenv.config({path: path.join(__dirname, '..', '.env')}).parsed).map(([key, value]) => {
+Object.entries(dotenv.config({path: envPath}).parsed).map(([key, value]) => {
     (() => {
         if (value.toLowerCase() === 'true') return value = true;
         if (value.toLowerCase() === 'false') return value = false;
@@ -23,6 +24,5 @@ if (env.PROD) {
 
 
 app.listen(env.PORT, () => {
-    console.log(`listening on http://localhost:${env.PORT}`);
+    console.log('listening on http://localhost:' + env.PORT);
 })
-

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/index.js --inspect",
     "start:dev": "forever --id \"waterfront\" start ./src/index.js",
-    "start:prod": "node src/index.js"
+    "start:prod": "node ./src/index.js"
   },
   "author": "",
   "license": "ISC",

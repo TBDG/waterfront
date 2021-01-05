@@ -68,7 +68,7 @@ const Footer = () => {
                 {itemMap(footerVars.socialMedia, true)}
             </div>
             <br />
-            <p><AiOutlineCopyright /> 2021. The Waterfront SLC</p>
+            <p><AiOutlineCopyright /> 2021, The Waterfront SLC</p>
         </div>
     )
 }

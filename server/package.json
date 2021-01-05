@@ -4,11 +4,16 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js --inspect"
+    "start": "nodemon src/index.js --inspect",
+    "start:dev": "forever --id \"waterfront\" start ./src/index.js",
+    "start:prod": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

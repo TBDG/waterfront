@@ -4,9 +4,12 @@
   "description": "For the store",
   "main": "index.js",
   "scripts": {
+    "build:prod": "cd ./public && npm run build:prod",
     "start": "concurrently npm:start:*",
     "start:public": "cd ./public && npm start",
     "start:server": "cd ./server && npm start",
+    "start:dev": "cd ./server && npm run start:dev",
+    "start:prod": "cd ./server && npm run start:prod",
     "setup:public": "cd ./public && npm i",
     "setup:server": "cd ./server && npm i",
     "postinstall": "npm run setup:server && npm run setup:public"
@@ -15,5 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

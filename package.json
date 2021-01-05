@@ -10,6 +10,7 @@
     "start:server": "cd ./server && npm start",
     "start:dev": "cd ./server && npm run start:dev",
     "start:prod": "cd ./server && npm run start:prod",
+    "stop:dev": "forever stop waterfront",
     "setup:public": "cd ./public && npm i",
     "setup:server": "cd ./server && npm i",
     "postinstall": "npm run setup:server && npm run setup:public"

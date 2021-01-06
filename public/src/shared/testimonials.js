@@ -1,4 +1,6 @@
 import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Testimonials = () => {
     const quotes = [
@@ -9,7 +11,42 @@ const Testimonials = () => {
         ],[
             "What an amazing experience today at your awesome shop! thank you so much for the time spent with my wife and I, you have definitely gained long lasting customers. I HIGHLY recommend Waterfront as your new LFS. We will see you again soon our new friend!! Cant't wait to see what's next!!", "Beau Mills"
         ]
-    ]
+    ];
 
-    return <h1>this is a testimonial yo</h1>
+    const responsive = {
+        superLargeDesktop: {
+          // for the car
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
+
+
+
+    return (
+        <div id='testimonials'>
+            <Carousel responsive={responsive}>
+                <div >Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+            </Carousel>;
+        </div>
+    )
 }
+
+
+
+export default Testimonials;

@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import Footer from './Footer/footer.js';
-import Testimonials from './Testimonials/testimonials.js'
+import Footer from './shared/footer.js';
+import Testimonials from './shared/testimonials.js';
 import './app.scss';
 
 function App() {

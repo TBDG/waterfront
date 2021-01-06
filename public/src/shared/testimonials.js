@@ -11,5 +11,5 @@ const Testimonials = () => {
         ]
     ]
 
-    
+    return <h1>this is a testimonial yo</h1>
 }

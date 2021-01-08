@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Footer from './shared/footer.js';
 import './app.scss';
 

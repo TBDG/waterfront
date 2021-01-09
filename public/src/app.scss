@@ -1,9 +1,12 @@
 @import 'bootstrap/scss/bootstrap.scss';
-@import '_variables_&_mixins.scss';
+@import './_variables_&_mixins.scss';
 
 <<<<<<< HEAD
 @import 'shared/_footer.scss';
 @import 'shared/_testimonials.scss';
+=======
+@import './shared/_footer.scss';
+>>>>>>> origin/develop
 
 body {
     font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;

@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:prod": "react-scripts build && node move-build.js",
+    "build:prod": "react-scripts build && node ./scripts/move-build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:8080"
 }

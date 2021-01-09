@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "cd ./public && npm run build:prod",
-    "start": "concurrently npm:start:*",
+    "script:seedDb": "cd ./server npm run script:seedDb",
+    "start": "concurrently -n public,server,db -c green,cyan,yellow \"npm:start:public\" \"npm:start:server\" \"npm:start:local:postgres\" ",
     "start:public": "cd ./public && npm start",
     "start:server": "cd ./server && npm start",
     "start:dev": "cd ./server && npm run start:dev",
     "start:prod": "cd ./server && npm run start:prod",
+    "start:local:postgres": "docker-compose -f ./docker-compose.local.yml up -d",
     "stop:dev": "forever stop waterfront",
+    "stop:local:postgres": "docker-compose -f ./docker-compose.local.yml down",
     "setup:public": "cd ./public && npm i",
     "setup:server": "cd ./server && npm i",
     "postinstall": "npm run setup:server && npm run setup:public"

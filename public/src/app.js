@@ -1,4 +1,4 @@
-import Footer from './Footer/footer.js';
+import Footer from './shared/footer.js';
 import './app.scss';
 
 function App() {

@@ -1,0 +1,77 @@
+/* ====================== Mobile styles ========================== */
+.Header {
+    background-color: $secondaryColor;
+    color: $highlightColor;
+    position: sticky;
+    height: 100px;
+}
+
+.logo {
+    img {
+        width: 100%;
+    }
+}
+
+.icons {
+    @include flexCenter(row);
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 40px;
+}
+
+
+.menu {
+    display: none;
+    transition: ease-in;
+    background-color: $secondaryColor;
+    position: relative;
+    top: 10px;
+
+    ul {
+        list-style-type: none;
+        li {
+            display: block;
+            padding: 10px 0px;
+        }
+    }
+}
+
+
+/* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
+@media only screen and (min-width: 1200px) {
+    .Header {
+        .logo {
+            @include flexCenter(row);
+            justify-content: flex-start;
+
+            img {
+                width: 50%;
+            }
+        }
+        .menu {
+            @include flexCenter(column);
+            align-items: center;
+        }
+
+        .icons {
+            display: none;
+        }
+
+        a {
+            padding: 5px;
+        }
+
+        a:hover {
+            border-bottom: 2px solid;
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+}

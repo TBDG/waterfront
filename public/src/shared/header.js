@@ -1,34 +1,37 @@
 import logo from '../wf-logo-web.png'
-import {GiHamburgerMenu} from "react-icons/all";
+import {GiHamburgerMenu, GrFormClose} from "react-icons/all";
 
 function Header() {
 
     const showMenu = () => {
         var x = document.getElementById('menu')
-        if (x.style.display === 'inline-block') {
-            x.style.display = 'none'
+        if (x.style.height === '92px') {
+            x.style.height = '0px'
         } else {
-            x.style.display = 'inline-block'
+            x.style.height = '92px'
         }
     }
 
     return (
         <div className="Header row">
-            {/*<div className="container">*/}
-            <div className="logo col-6 col-lg-4">
-                <img src={logo} alt='logo'/>
+            <div className="logo col-6 col-xl-4">
+                <a href='#'>
+                    <img src={logo} alt='logo'/>
+                </a>
             </div>
             <div className="icons col-6">
-                <GiHamburgerMenu
-                    classname='hamburger'
-                    onClick={showMenu}>
-                </GiHamburgerMenu>
+                    <GiHamburgerMenu
+                        classname='hamburger'
+                        onClick={showMenu}>
+                    </GiHamburgerMenu>
             </div>
 
-            <div className="menu col-12 col-lg-4" id='menu'>
+            <div
+                className="menu col-12 col-xl-4"
+                id='menu'>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Live Fish</a></li>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>Live Fish</a></li>
                 </ul>
             </div>
         </div>

@@ -13,6 +13,10 @@ body {
     text-align: center;
 }
 
+.content {
+    min-height: calc(99vh - #{$headerHeight} - #{$footerHeight});
+}
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;

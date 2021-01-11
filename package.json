@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "cd ./public && npm run build:prod",
-    "script:seedDb": "cd ./server npm run script:seedDb",
+    "script:seedDb": "cd ./server && npm run script:seedDb",
     "start": "concurrently -n public,server,db -c green,cyan,yellow \"npm:start:public\" \"npm:start:server\" \"npm:start:local:postgres\" ",
     "start:public": "cd ./public && npm start",
     "start:server": "cd ./server && npm start",

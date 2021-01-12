@@ -1,13 +1,19 @@
-import './app.scss';
 import Header from "./shared/header";
-import Footer from "./Footer/footer";
+import Newsletter from './shared/newsletter';
+import Testimonials from './shared/testimonials.js';
+import StoreTour from './shared/store-tour';
+import Footer from './shared/footer.js';
+import './app.scss';
+
 
 function App() {
     return (
         <div className="App">
             <Header/>
             <div className='content'>
-                <h1>filler</h1>
+                <Newsletter/>
+                <Testimonials/>
+                <StoreTour/>
             </div>
             <Footer/>
         </div>

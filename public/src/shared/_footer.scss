@@ -1,17 +1,17 @@
 #footer {
-    background-color: $secondaryColor;
+    background-color: $secondaryBackgroundColor;
     font-size: 12px;
-    color: #333232;
+    color: $secondaryTextColor;
     text-align: right;
     padding: 5%;
     padding-top: 3%;
     padding-bottom: 1%;
     width: 100%;
-    border-top: $mainColor 1px solid;
+    border-top: $primaryBackgroundColor 1px solid;
     height: $footerHeight;
 
     p a {
-        color:  #333232;
+        color:  $secondaryTextColor;
         font-size: 18px;
     }
 }
@@ -19,7 +19,7 @@
 .footer-icon {
     font-size: 30px;
     margin: 0 0 0 20px;
-    color:  #333232;
+    color:  $secondaryTextColor;
 }
 
 a :hover {

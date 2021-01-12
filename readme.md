@@ -3,9 +3,21 @@
 
 ### Getting Started
 
+#### Tech Needed
+
+You will need [Nodejs](https://nodejs.org/en/) and [Docker](https://www.docker.com/products/docker-desktop)
+
+#### Starting Steps for Local Development
+
 Clone this repo
 
 Run `npm install` This will also install subprojects
+
+Setup .env `cp .env.example .env`
+
+(Optional) if you need to have a database live you will need to run these two steps (requires Docker)
+* `npm run start:local:postgres`
+* `npm run script:seedDb`
 
 Run `npm start` This should start subprojects if they are needed
 

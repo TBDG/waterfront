@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillFacebook } from 'react-icons/ai';
+//see documentation: https://react-icons.github.io/react-icons/
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiOutlineCopyright } from 'react-icons/ai';
 

@@ -22,6 +22,10 @@
     justify-content: flex-end;
     padding: 20px;
     font-size: 40px;
+    .close {
+        font-size: 45px;
+        color: #0997f5;
+    }
 }
 
 
@@ -82,15 +86,17 @@
 /* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
 @media only screen and (min-width: 1200px) {
         .menu {
-            height: inherit;
+            height: $headerHeight;
             @include flexCenter(column);
             align-items: center;
             position: inherit;
+            padding-left: 50px;
             ul {
                 border: 0;
                 li {
                     border: 0;
                     width: auto;
+                    padding: 0px 20px;
                 }
             }
         }

@@ -6,82 +6,80 @@
     font-size: 15px;
     color: $darkBackgroundTextColor;
     padding: 55px;
-}
-
-#loc-flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.heading {
-    color: $primaryTextColor;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.location {
-    white-space: pre-wrap;
-    color: $secondaryTextColor;
-    background-color: white;
-    padding: 35px;
-    flex-basis: 25%;
-}
-
-.empty-space {
-    flex-basis: 50%;
-}
-
-@media (max-width: 1140px) {
-    
-    .location {
-        flex-basis: 30%;
-    }
-
-    .empty-space {
-        flex-basis: 30%;
-    }
-}
-
-@media (max-width: 980px) {
-    #location {
-        background-position: 0% 25%;
-    }
-    
-    .location {
-        flex-basis: 40%;
-    }
-
-    .empty-space {
-        flex-basis: 40%;
-    }
-}
-
-@media (max-width: 749px) {
-    #location {
-        padding: 0px;
-    }
 
     #loc-flex-container {
-        top: 0px;
-        height: 530px;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-
+    
+    .heading {
+        color: $primaryTextColor;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    
     .location {
-        height: 300px;
-        font-size: 12px;
-        padding: 10px;
-        background-color: $secondaryBackgroundColor;
+        white-space: pre-wrap;
+        color: $secondaryTextColor;
+        background-color: white;
+        padding: 35px;
+        flex-basis: 25%;
     }
-
+    
     .empty-space {
-        background-image: url(./location.jpg);
-        background-size: cover;
-        background-position: 0% 30%;
-        width: 100%;
-        height: 230px;
+        flex-basis: 50%;
     }
+    
+    @media (max-width: 1140px) {
+        
+        .location {
+            flex-basis: 30%;
+        }
+    
+        .empty-space {
+            flex-basis: 30%;
+        }
+    }
+    
+    @media (max-width: 980px) {
+        background-position: 0% 25%;
+        
+        .location {
+            flex-basis: 40%;
+        }
+    
+        .empty-space {
+            flex-basis: 40%;
+        }
+    }
+    
+    @media (max-width: 749px) {
+        padding: 0px;
+    
+        #loc-flex-container {
+            top: 0px;
+            height: 530px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    
+        .location {
+            height: 300px;
+            font-size: 12px;
+            padding: 10px;
+            background-color: $secondaryBackgroundColor;
+        }
+    
+        .empty-space {
+            background-image: url(./location.jpg);
+            background-size: cover;
+            background-position: 0% 30%;
+            width: 100%;
+            height: 230px;
+        }
+    }
+    
 }
+

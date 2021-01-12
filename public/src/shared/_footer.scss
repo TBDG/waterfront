@@ -13,14 +13,16 @@
         color:  $secondaryTextColor;
         font-size: 18px;
     }
+
+    .footer-icon {
+        font-size: 30px;
+        margin: 0 0 0 20px;
+        color:  $secondaryTextColor;
+    }
+    
+    a :hover {
+        color: dimgray;
+    }
 }
 
-.footer-icon {
-    font-size: 30px;
-    margin: 0 0 0 20px;
-    color:  $secondaryTextColor;
-}
 
-a :hover {
-    color: dimgray;
-}

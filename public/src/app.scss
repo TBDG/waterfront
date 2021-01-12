@@ -3,12 +3,11 @@ $secondary: #606060;
 @import 'bootstrap/scss/bootstrap.scss';
 @import './_variables_&_mixins.scss';
 
+@import './shared/_footer.scss';
+@import './shared/_location.scss';
 @import './shared/_landing.scss';
 @import './shared/_newsletter.scss';
 @import './shared/_testimonials.scss';
-@import './shared/_location.scss';
-@import './shared/_footer.scss';
-
 
 body {
     font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;

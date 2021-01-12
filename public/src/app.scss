@@ -3,7 +3,7 @@ $secondary: #606060;
 @import 'bootstrap/scss/bootstrap.scss';
 @import './_variables_&_mixins.scss';
 
-@import './shared/header';
+@import './shared/_header';
 @import './shared/_footer.scss';
 @import './shared/_newsletter.scss';
 @import './shared/_store-tour.scss';

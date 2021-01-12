@@ -3,26 +3,26 @@ import Carousel from 'react-multi-carousel';
 //see documentation: https://www.npmjs.com/package/react-multi-carousel
 import 'react-multi-carousel/lib/styles.css';
 import {GrBlockQuote} from 'react-icons/gr';
-import {VscChevronLeft} from 'react-icons/vsc';
-import {VscChevronRight} from 'react-icons/vsc';
+// import {VscChevronLeft} from 'react-icons/vsc';
+// import {VscChevronRight} from 'react-icons/vsc';
 //see documentation: https://react-icons.github.io/react-icons/
 
-const CustomRightArrow = ({ onClick, ...rest }) => {
-    const {
-        onMove,
-        carouselState: { currentSlide, deviceType }
-    } = rest;
-    return <button onClick={() => onClick()}><VscChevronRight />Hwellos</button>;
-};
+// const CustomRightArrow = ({ onClick, ...rest }) => {
+//     const {
+//         onMove,
+//         carouselState: { currentSlide, deviceType }
+//     } = rest;
+//     return <button onClick={() => onClick()}><VscChevronRight />Hwellos</button>;
+// };
 
-const CustomLeftArrow = ({ onClick, ...rest }) => {
-    const {
-        onMove,
-        carouselState: { currentSlide, deviceType }
-    } = rest;
-    // onMove means if dragging or swiping in progress.
-    return <button onClick={() => onClick()}><VscChevronLeft /></button>;
-};
+// const CustomLeftArrow = ({ onClick, ...rest }) => {
+//     const {
+//         onMove,
+//         carouselState: { currentSlide, deviceType }
+//     } = rest;
+//     // onMove means if dragging or swiping in progress.
+//     return <button onClick={() => onClick()}><VscChevronLeft /></button>;
+// };
 
 const Testimonials = () => {
     const quotes = [
@@ -79,8 +79,8 @@ const Testimonials = () => {
                 centerMode={false}
                 className=""
                 containerClass="container-with-dots"
-                customLeftArrow={<CustomLeftArrow />}
-                customRightArrow={<CustomRightArrow />}
+                // customLeftArrow={<CustomLeftArrow />}
+                // customRightArrow={<CustomRightArrow />}
                 dotListClass=""
                 draggable={false}
                 focusOnSelect={false}
@@ -91,7 +91,7 @@ const Testimonials = () => {
                 renderButtonGroupOutside={false}
                 renderDotsOutside
                 responsive={responsive}
-                showDots
+                showDots={false}
                 sliderClass=""
                 slidesToSlide={1}
                 swipeable

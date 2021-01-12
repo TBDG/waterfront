@@ -8,12 +8,12 @@ function Header() {
 
     const showMenu = () => {
         var x = document.getElementById('menu')
-            x.style.height = '92px'
-            setNavMenu(false)
+        x.style.height = '96px'
+        setNavMenu(false)
     }
     const hideMenu = () => {
         var x = document.getElementById('menu')
-        if (x.style.height === '92px') {
+        if (x.style.height === '96px') {
             x.style.height = '0px'
             setNavMenu(true)
         }

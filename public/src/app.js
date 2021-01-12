@@ -1,6 +1,7 @@
 import Footer from './shared/footer.js';
 import Newsletter from './shared/newsletter';
 import Testimonials from './shared/testimonials.js';
+import StoreTour from './shared/store-tour';
 import './app.scss';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <div className="App">
             <Newsletter/>
             <Testimonials />
+            <StoreTour/>
             <Footer />
         </div>
     );

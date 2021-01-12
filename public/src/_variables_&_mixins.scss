@@ -8,6 +8,10 @@ $primaryTextColor: #339bf2;
 $secondaryTextColor: #333232;
 $darkBackgroundTextColor: #FFFFFF;
 
+// Heights
+$headerHeight: 15vh;
+$footerHeight: 100px;
+
 
 //Mixins
 @mixin flexCenter($direction) {

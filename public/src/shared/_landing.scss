@@ -4,7 +4,7 @@
     background-position: center center;
     background-size: cover;
     font-size: 15px;
-    color: $secondaryColor;
+    color: $darkBackgroundTextColor;
     padding: 55px;
 }
 
@@ -20,12 +20,15 @@
 .title {
     font-size: 4.33333em;
     font-weight: 700;
+    margin-top: 4%;
+    margin-bottom: 0px;
 }
 
 .subtitle {
+    margin-top: 0px;
     font-size: 1.53333em;
     font-weight: 700;
-    width: 70%;
+    width: 66%;
 }
 
 @media (max-width: 900px) {

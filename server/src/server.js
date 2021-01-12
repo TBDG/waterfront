@@ -11,6 +11,7 @@ Object.entries(dotenv.config({path: envPath}).parsed).map(([key, value]) => {
     (() => {
         if (value.toLowerCase() === 'true') return value = true;
         if (value.toLowerCase() === 'false') return value = false;
+        if (/\w/i.test(value)) return;
         if (!isNaN(parseFloat(value))) return value = parseFloat(value);
     })();
 

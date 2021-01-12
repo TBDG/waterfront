@@ -1,0 +1,125 @@
+#store-tour {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .ratio-width {
+        max-width: 1050px;
+        width: 100%;
+    }
+
+    .ratio-container {
+        position: relative;
+        background-color: $secondaryBackgroundColor;
+        width: 100%;
+        padding-bottom: 56.25%;
+
+    }
+
+    .youtube-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .close-holder {
+            background-color: white;
+            position: absolute;
+            border-radius: 100px;
+            padding: 0;
+            top: 25px;
+            right: 25px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .close-button {
+            position: relative;
+            top: -5px;
+            right: 5px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 650px) {
+            .close-holder {
+                top: 25px;
+                right: 25px;
+                width: 40px;
+                height: 40px;
+
+            }
+
+            .close-button {
+                font-size: 60px;
+                top: -10px;
+                right: 10px;
+            }
+        }
+    }
+
+    .overlay-card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("./tour-overlay.jpg");
+        background-size: cover;
+
+        .store-tour-overlay-text {
+            position: relative;
+            top: 15px;
+            color: $darkBackgroundTextColor;
+            font-weight: bold;
+        }
+
+        .play-holder {
+            background-color: white;
+            position: absolute;
+            padding: 0;
+            border-radius: 100px;
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+        }
+
+        .play-button {
+            position: relative;
+            cursor: pointer;
+            top: -5px;
+            right: 5px;
+            font-size: 40px;
+        }
+
+        @media (min-width: 650px) {
+            .store-tour-overlay-text {
+                top: 40px;
+                font-size: 50px;
+            }
+
+            .play-holder {
+                width: 44px;
+                height: 44px;
+                top: calc(50% - 22px);
+                left: calc(50% - 22px);
+            }
+
+            .play-button {
+                font-size: 60px;
+
+            }
+        }
+
+        @media (min-width: 1050px) {
+            .store-tour-overlay-text {
+                top: 55px;
+                font-size: 70px;
+            }
+        }
+
+    }
+}
+
+
+

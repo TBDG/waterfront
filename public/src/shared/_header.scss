@@ -1,0 +1,109 @@
+/* ====================== Mobile styles ========================== */
+.Header {
+    background-color: #ffffff;
+    color: $primaryTextColor;
+    height: $headerHeight;
+    //width: 100%;
+}
+
+.logo {
+    @include flexCenter(row);
+    justify-content: flex-start;
+    height: 100%;
+    img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.icons {
+    @include flexCenter(row);
+    justify-content: flex-end;
+    padding: 0px 30px;
+    font-size: 40px;
+    .close {
+        font-size: 45px;
+        color: $primaryTextColor;
+    }
+}
+
+
+.menu {
+    height: 0px;
+    transition: height 1s;
+    background-color: #ffffff;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    font-size: large;
+    z-index: 10;
+
+    a {
+        padding: 5px;
+        color: $primaryTextColor;
+        text-decoration: none;
+    }
+
+    a:hover {
+        border-bottom: 2px solid;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid #ebebeb;
+        li {
+            display: block;
+            width: 100%;
+            padding: 10px 0px;
+            border-top: 1px solid #ebebeb;
+        }
+    }
+}
+
+/* ====================== Tablet Only (Overrides Mobile Styles) ========================== */
+@media only screen and (min-width: 750px) {
+    .Header {
+        .logo {
+            @include flexCenter(row);
+            justify-content: flex-start;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+}
+/* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
+@media only screen and (min-width: 1200px) {
+        .menu {
+            height: $headerHeight;
+            @include flexCenter(column);
+            align-items: center;
+            position: inherit;
+            padding-left: 50px;
+            ul {
+                border: 0;
+                li {
+                    border: 0;
+                    width: auto;
+                    padding: 0px 20px;
+                }
+            }
+        }
+
+        .icons {
+            display: none;
+        }
+
+}

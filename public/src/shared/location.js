@@ -1,16 +1,22 @@
 import React from 'react';
-
+import {MdLocationOn} from 'react-icons/md';
+//see documentation: https://react-icons.github.io/react-icons/
 
 const Location = () => {
+    const address = '4782 S Plum St,\nMurray, UT 84123-3613\n';
+    const hours = 'WEDS- THURS, 10am-6pm\nFRI-SAT, 10am-8pm\n\nSUN, 10am-6pm\n\nCLOSED MONDAY & TUESDAY';
+    const directions = 'https://www.google.com/maps?daddr=4782+S+Plum+St,+Salt+Lake+City,+UT+84123-3613,+United+States+Murray,+UT+84123-3613';
 
     return (
-        <div id='landing'>
-            <div id='landing-text'>            
-                <p className='title'>Utah's Newest Fish Store</p>
-                <div className='subtitle'>
-                    <p>Welcome to Utah's newest fish store, where we specialize in Freshwater fish, plants, and other aquarium supplies.</p>
-                    <p>Come on in and ask our knowledgable staff about what we have in stock or what we can order in for you to make your tank just that much better!</p>
+        <div id='location'>
+            <div id='loc-flex-container'>            
+                <div className='location'>
+                    <p className='heading'>LOCATION</p>
+                    <p>{address}</p>
+                    <p>{hours}</p>
+                    <a className='btn btn-outline-dark' target='_blank' href={directions}><MdLocationOn/> GET DIRECTIONS</a>
                 </div>
+                <div className='empty-space' />
             </div>
 
 

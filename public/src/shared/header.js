@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import logo from '../wf-logo-web.png'
+import logo from './wf-logo-web.png'
 import {FiMenu, IoClose} from "react-icons/all";
 
 function Header() {

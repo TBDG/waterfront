@@ -19,7 +19,7 @@
 .icons {
     @include flexCenter(row);
     justify-content: flex-end;
-    padding: 20px;
+    padding: 0px 30px;
     font-size: 40px;
     .close {
         font-size: 45px;

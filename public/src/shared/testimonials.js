@@ -3,7 +3,26 @@ import Carousel from 'react-multi-carousel';
 //see documentation: https://www.npmjs.com/package/react-multi-carousel
 import 'react-multi-carousel/lib/styles.css';
 import {GrBlockQuote} from 'react-icons/gr';
+import {VscChevronLeft} from 'react-icons/vsc';
+import {VscChevronRight} from 'react-icons/vsc';
 //see documentation: https://react-icons.github.io/react-icons/
+
+const CustomRightArrow = ({ onClick, ...rest }) => {
+    const {
+        onMove,
+        carouselState: { currentSlide, deviceType }
+    } = rest;
+    return <button onClick={() => onClick()}><VscChevronRight />Hwellos</button>;
+};
+
+const CustomLeftArrow = ({ onClick, ...rest }) => {
+    const {
+        onMove,
+        carouselState: { currentSlide, deviceType }
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return <button onClick={() => onClick()}><VscChevronLeft /></button>;
+};
 
 const Testimonials = () => {
     const quotes = [
@@ -54,8 +73,28 @@ const Testimonials = () => {
             }}
         >
             <Carousel
+                additionalTransfrom={0}
+                arrows
+                autoPlaySpeed={3000}
+                centerMode={false}
+                className=""
+                containerClass="container-with-dots"
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                dotListClass=""
+                draggable={false}
+                focusOnSelect={false}
+                infinite={false}
+                itemClass=""
+                keyBoardControl
+                minimumTouchDrag={80}
+                renderButtonGroupOutside={false}
+                renderDotsOutside
                 responsive={responsive}
                 showDots
+                sliderClass=""
+                slidesToSlide={1}
+                swipeable
             >
                 <div>{quoteBlock(quotes[0][0], quotes[0][1])}</div>
                 <div>{quoteBlock(quotes[1][0], quotes[1][1])}</div>

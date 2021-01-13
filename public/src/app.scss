@@ -1,25 +1,36 @@
 $secondary: #606060;
 
 @import 'bootstrap/scss/bootstrap.scss';
-@import './_variables_&_mixins.scss';
+@import './_variables_&_mixins';
 
+@import './shared/_footer';
 @import './shared/_header';
-@import './shared/_footer.scss';
-@import './shared/_location.scss';
-@import './shared/_landing.scss';
-@import './shared/_newsletter.scss';
-@import './shared/_store-tour.scss';
-@import './shared/_testimonials.scss';
+@import './shared/_home-images';
+@import './shared/_landing';
+@import './shared/_location';
+@import './shared/_newsletter';
+@import './shared/_store-tour';
+@import './shared/_testimonials';
 
 body {
     font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
     text-align: center;
 }
 
-.content {
-    min-height: calc(99vh - #{$headerHeight} - #{$footerHeight});
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: $primaryTextColor;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: block;
+
+    //min-height: calc(99vh - #{$headerHeight} - #{$footerHeight});
 }

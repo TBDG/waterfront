@@ -1,18 +1,21 @@
 #testimonials {
     margin: auto;
     width: 80%;
+    max-width: 1200px;
+
+    .quote-block {
+        white-space: pre-wrap;
+        margin: 20px;
+    }
+    
+    .quote-icon {
+        color: $primaryTextColor;
+    }
+    
+    .author {
+        color: $primaryTextColor;
+        font-size: 13px;
+    }
 }
 
-.quote-block {
-    white-space: pre-wrap;
-    margin: 20px;
-}
 
-.quote-icon {
-    color: $primaryTextColor;
-}
-
-.author {
-    color: $primaryTextColor;
-    font-size: 13px;
-}

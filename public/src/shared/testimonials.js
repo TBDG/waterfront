@@ -69,9 +69,11 @@ const Testimonials = () => {
             id="testimonials"
             style={{
                 paddingBottom: '30px',
+                paddingTop: '30px',
                 position: 'relative',
             }}
         >
+            <h3>See what people are saying!</h3>
             <Carousel
                 additionalTransfrom={0}
                 arrows

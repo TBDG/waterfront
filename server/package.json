@@ -7,7 +7,7 @@
     "script:seedDb": "node ./scripts/seed-db.js",
     "start": "nodemon --inspect=9229 src/server.js ",
     "start:dev": "forever --id \"waterfront\" start ./src/server.js",
-    "start:prod": "node ./src/server.js"
+    "start:prod": "node ./scripts/start-prod.js"
   },
   "author": "",
   "license": "ISC",

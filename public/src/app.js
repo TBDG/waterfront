@@ -1,12 +1,13 @@
 import './app.scss';
 
-import Footer from './shared/footer.js';
-import Header from './shared/header.js';
-import Landing from './shared/landing.js';
-import Location from './shared/location.js';
+import Footer from './shared/footer';
+import Header from './shared/header';
+import HomeImages from './shared/home-images';
+import Landing from './shared/landing';
+import Location from './shared/location';
 import Newsletter from './shared/newsletter';
 import StoreTour from './shared/store-tour';
-import Testimonials from './shared/testimonials.js';
+import Testimonials from './shared/testimonials';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                 <Landing />
                 <Newsletter/>
                 <Testimonials/>
+                <HomeImages/>
                 <StoreTour/>
                 <Location />
             </div>

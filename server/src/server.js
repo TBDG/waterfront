@@ -40,7 +40,7 @@ const startup = async () => {
 /**
  * Ensure we either do have connection to database or do not have it then start express
  * */
-massive(`postgres://${env.POSTGRES_USER}:${env.POSTGRES_PASS}@localhost:${env.POSTGRES_PORT}/${env.POSTGRES_DB}`).then((db) => {
+massive(`postgres://${env.POSTGRES_USER}:${env.POSTGRES_PASS}@${env.POSTGRES_HOST}:${env.POSTGRES_PORT}/${env.POSTGRES_DB}`).then((db) => {
     global.myDb = db;
     console.log('connected to db');
     startup();

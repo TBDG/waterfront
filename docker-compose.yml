@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  app:
+    container_name: app
+    build:
+      dockerfile: ./docker/node.prod.dockerfile
+      args:
+        SERVER_PORT: ${SERVER_PORT}
+      context: ./
+    restart: always
+    networks:
+      - waterfront
+    links:
+      - "postgres:postgres"
+    depends_on:
+      - "postgres"
+    ports:
+     - ${SERVER_PORT}:${SERVER_PORT}
+
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    restart: always
+    networks:
+      - waterfront
+    volumes:
+      - ./database-files:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+    expose:
+      - 5432
+
+networks:
+  waterfront:
+    driver: bridge

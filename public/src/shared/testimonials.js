@@ -29,7 +29,7 @@ const Testimonials = () => {
         superLargeDesktop: {
             // for the car
             breakpoint: {max: 4000, min: 3000},
-            items: 5,
+            items: 3,
         },
         desktop: {
             breakpoint: {max: 3000, min: 1024},

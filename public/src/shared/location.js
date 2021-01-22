@@ -14,7 +14,7 @@ const Location = () => {
                     <p className='heading'>LOCATION</p>
                     <p>{address}</p>
                     <p>{hours}</p>
-                    <a className='btn btn-outline-dark' target='_blank' href={directions}><MdLocationOn/> GET DIRECTIONS</a>
+                    <a className='btn btn-outline-dark' target='_blank' rel='noreferrer' href={directions}><MdLocationOn/> GET DIRECTIONS</a>
                 </div>
                 <div className='empty-space' />
             </div>

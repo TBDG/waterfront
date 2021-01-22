@@ -55,6 +55,13 @@
             font-size: 20px;
         }
     }
+
+    @media (min-width: 3000px) {
+        font-size: 25px;
+        max-width: 3000px;
+        min-height: 30%;
+        
+    }
 }
 
 

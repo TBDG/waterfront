@@ -1,9 +1,19 @@
 /* ====================== Mobile styles ========================== */
+.spacer {
+    //min-height: calc(#{$headerHeight} + mobile-menu);
+    height: $headerHeight;
+}
+
 .Header {
     background-color: #ffffff;
     color: $primaryTextColor;
     height: $headerHeight;
     @include flexCenter(column);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
 }
 
 .align-start {

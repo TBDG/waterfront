@@ -1,0 +1,41 @@
+#home-images {
+    height: 475px;
+    display: flex;
+    flex-direction: row;
+
+    .four-images {
+        flex:1;
+        background-size: cover;
+    }
+
+    #image-1 {
+        background-image: url("./images/home1.jpg");
+    }
+    #image-2 {
+        background-image: url("./images/home2.jpg");
+    }
+    #image-3 {
+        background-image: url("./images/home3.jpg");
+    }
+    #image-4 {
+        background-image: url("./images/home4.jpg");
+    }
+}
+
+@media (max-width: 1000px) {
+    #home-images {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .four-images {
+            flex: none;
+            height: 350px;
+            max-width: 400px;
+            width: 100vw;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// Variables
+// Background Colors
+$primaryBackgroundColor: lightgrey;
+$secondaryBackgroundColor: #f5f5f5;
+
+// Text Colors
+$primaryTextColor: #339bf2;
+$secondaryTextColor: #333232;
+$darkBackgroundTextColor: #FFFFFF;
+
+// Heights
+$headerHeight: 13vh;
+$footerHeight: 120px;
+
+
+//Mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

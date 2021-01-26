@@ -1,0 +1,125 @@
+/* ====================== Mobile styles ========================== */
+.Header {
+    background-color: #ffffff;
+    color: $primaryTextColor;
+    height: $headerHeight;
+    @include flexCenter(column);
+}
+
+.align-start {
+    max-width: none;
+}
+
+.logo {
+    @include flexCenter(row);
+    justify-content: flex-start;
+
+    img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.icons {
+    @include flexCenter(row);
+    justify-content: flex-end;
+    padding: 0px 30px;
+    font-size: 40px;
+
+    .close {
+        font-size: 45px;
+        color: $primaryTextColor;
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.mobile-menu {
+    height: 0px;
+    transition: height 1s;
+    background-color: #ffffff;
+    overflow: hidden;
+    font-size: large;
+
+    a {
+        padding: 5px;
+        color: $primaryTextColor;
+        text-decoration: none;
+    }
+
+    a:hover {
+        border-bottom: 2px solid;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #ebebeb;
+
+        li {
+            display: block;
+            width: 100%;
+            padding: 10px 0px;
+            border-top: 1px solid #ebebeb;
+        }
+    }
+}
+
+/* ====================== Tablet Only (Overrides Mobile Styles) ========================== */
+@media only screen and (min-width: 750px) {
+    .Header {
+        .logo {
+            @include flexCenter(row);
+            justify-content: flex-start;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+/* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
+@media only screen and (min-width: 1200px) {
+    .mobile-menu {
+        display: none;
+    }
+    .menu {
+        height: $headerHeight;
+        @include flexCenter(column);
+        font-size: x-large;
+
+        li {
+            padding: 0px 20px;
+        }
+
+        a {
+            padding: 5px;
+            color: $primaryTextColor;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-bottom: 2px solid;
+        }
+    }
+
+    .icons {
+        display: none;
+    }
+
+
+}

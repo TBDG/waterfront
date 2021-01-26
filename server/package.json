@@ -4,11 +4,19 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js --inspect"
+    "script:seedDb": "node ./scripts/seed-db.js",
+    "start": "nodemon --inspect=9229 src/server.js ",
+    "start:dev": "forever --id \"waterfront\" start ./src/server.js",
+    "start:prod": "node ./scripts/start-prod.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "massive": "^6.6.2"
   }
 }

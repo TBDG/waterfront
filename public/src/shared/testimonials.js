@@ -2,27 +2,17 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 //see documentation: https://www.npmjs.com/package/react-multi-carousel
 import 'react-multi-carousel/lib/styles.css';
-import {GrBlockQuote} from 'react-icons/gr';
-// import {VscChevronLeft} from 'react-icons/vsc';
-// import {VscChevronRight} from 'react-icons/vsc';
+import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa';
+import {VscChevronLeft, VscChevronRight} from 'react-icons/vsc';
 //see documentation: https://react-icons.github.io/react-icons/
 
-// const CustomRightArrow = ({ onClick, ...rest }) => {
-//     const {
-//         onMove,
-//         carouselState: { currentSlide, deviceType }
-//     } = rest;
-//     return <button onClick={() => onClick()}><VscChevronRight />Hwellos</button>;
-// };
+const CustomRightArrow = ({ onClick, ...rest }) => {
+    return <VscChevronRight className="right-arrow" onClick={() => onClick()}/>;
+};
 
-// const CustomLeftArrow = ({ onClick, ...rest }) => {
-//     const {
-//         onMove,
-//         carouselState: { currentSlide, deviceType }
-//     } = rest;
-//     // onMove means if dragging or swiping in progress.
-//     return <button onClick={() => onClick()}><VscChevronLeft /></button>;
-// };
+const CustomLeftArrow = ({ onClick, ...rest }) => {
+    return <VscChevronLeft className="left-arrow" onClick={() => onClick()}/>;
+};
 
 const Testimonials = () => {
     const quotes = [
@@ -39,7 +29,7 @@ const Testimonials = () => {
         superLargeDesktop: {
             // for the car
             breakpoint: {max: 4000, min: 3000},
-            items: 5,
+            items: 3,
         },
         desktop: {
             breakpoint: {max: 3000, min: 1024},
@@ -58,8 +48,11 @@ const Testimonials = () => {
     const quoteBlock = (quote, author) => {
         return (
             <div className='quote-block'>
-                <h1 className='quote-icon'><GrBlockQuote/></h1>
-                <p>{quote}</p>
+                <div className='quote-flexbox'>
+                    <h1 className='quote-icon quote-flexitem1'><FaQuoteLeft/></h1>
+                    <p className='quote-flexitem2'>{quote}</p>
+                    <h1 className='quote-icon quote-flexitem3'><FaQuoteRight/></h1>
+                </div>
                 <p className='author'>— {author}</p>
             </div>);
     };
@@ -69,9 +62,11 @@ const Testimonials = () => {
             id="testimonials"
             style={{
                 paddingBottom: '30px',
+                paddingTop: '30px',
                 position: 'relative',
             }}
         >
+            <h3 className='testimonials-title' >See what people are saying!</h3>
             <Carousel
                 additionalTransfrom={0}
                 arrows
@@ -79,8 +74,8 @@ const Testimonials = () => {
                 centerMode={false}
                 className=""
                 containerClass="container-with-dots"
-                // customLeftArrow={<CustomLeftArrow />}
-                // customRightArrow={<CustomRightArrow />}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
                 dotListClass=""
                 draggable={false}
                 focusOnSelect={false}

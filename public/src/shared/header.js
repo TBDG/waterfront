@@ -19,7 +19,7 @@ function Header() {
         }
     }
     return (
-        <div>
+        <div className='spacer'>
             <div className="Header">
                 <div className='container align-start'>
                     <div className='row'>
@@ -28,35 +28,35 @@ function Header() {
                                 <img src={logo} alt='logo'/>
                             </a>
                         </div>
-                        <div className="icons col-6">
-                            {navMenu ? <FiMenu
-                                className='hamburger'
-                                onClick={showMenu}>
-                            </FiMenu> : <div className='closeIcon'><IoClose
-                                className='close'
-                                onClick={hideMenu}/>
-                            </div>}
+                        {/*<div className="icons col-6">*/}
+                        {/*    {navMenu ? <FiMenu*/}
+                        {/*        className='hamburger'*/}
+                        {/*        onClick={showMenu}>*/}
+                        {/*    </FiMenu> : <div className='closeIcon'><IoClose*/}
+                        {/*        className='close'*/}
+                        {/*        onClick={hideMenu}/>*/}
+                        {/*    </div>}*/}
 
-                        </div>
+                        {/*</div>*/}
 
-                        <div
-                            className="menu col-12 col-xl-4"
-                            id='menu'
-                            onBlurCapture={hideMenu}>
-                            <ul>
-                                <li><a href='#'>Home</a></li>
-                                <li><a href='#'>Live Fish</a></li>
-                            </ul>
-                        </div>
+                        {/*<div*/}
+                        {/*    className="menu col-12 col-xl-4"*/}
+                        {/*    id='menu'*/}
+                        {/*    onBlurCapture={hideMenu}>*/}
+                        {/*    <ul>*/}
+                        {/*        <li><a href='#'>Home</a></li>*/}
+                        {/*        <li><a href='#'>Live Fish</a></li>*/}
+                        {/*    </ul>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>
-            <div className='mobile-menu' id='mobile-menu'>
-                <ul>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>Live Fish</a></li>
-                </ul>
-            </div>
+            {/*<div className='mobile-menu' id='mobile-menu'>*/}
+            {/*    <ul>*/}
+            {/*        <li><a href='#'>Home</a></li>*/}
+            {/*        <li><a href='#'>Live Fish</a></li>*/}
+            {/*    </ul>*/}
+            {/*</div>*/}
         </div>
     );
 }

@@ -20,6 +20,10 @@ async function connect() {
     return true;
 }
 
+async function seedDb() {
+    return await require('./seed-db');
+}
+
 
 function startApp() {
     require('../src/server');
@@ -34,6 +38,7 @@ function startApp() {
             await connect();
             console.log('connected starting app');
             clearInterval(interval);
+            await seedDb();
             startApp();
         } catch (e) {
             console.log(e);

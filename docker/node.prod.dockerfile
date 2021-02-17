@@ -1,6 +1,6 @@
 ARG SERVER_PORT
 
-FROM node:14-alpine as builder
+FROM node:14-alpine
 WORKDIR /app
 COPY ./ /app
 RUN npm install

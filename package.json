@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "cd ./public && npm run build:prod",
+    "docker:build:push": "npm run docker:build && npm run docker:push",
+    "docker:build": "docker build -t registry.gitlab.com/joshuabaert/waterfront/waterfront-service -f ./docker/node.prod.dockerfile .",
+    "docker:push": "docker push registry.gitlab.com/joshuabaert/waterfront/waterfront-service",
     "script:seedDb": "cd ./server && npm run script:seedDb",
-    "start": "concurrently -n public,server,db -c green,cyan,yellow \"npm:start:public\" \"npm:start:server\" \"npm:start:local:postgres\" ",
+    "start": "concurrently -n public,server,db -c green,cyan,yellow \"npm:start:public\" \"npm:start:server\" \"npm:start:local:postgres\"",
     "start:public": "cd ./public && npm start",
     "start:server": "cd ./server && npm start",
     "start:dev": "cd ./server && npm run start:dev",

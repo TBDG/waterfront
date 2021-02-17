@@ -6,8 +6,8 @@ const path = require('path');
 
 // Parsing .env file
 const envPath = path.join(__dirname, '..', '..', '.env');
-const env = {};
-Object.entries(dotenv.config({path: envPath}).parsed).map(([key, value]) => {
+const env = process.env.NODE_ENV === 'PROD' ? process.env : dotenv.config({path: envPath}).parsed;
+Object.entries(env).map(([key, value]) => {
     (() => {
         if (value.toLowerCase() === 'true') return value = true;
         if (value.toLowerCase() === 'false') return value = false;
@@ -17,6 +17,8 @@ Object.entries(dotenv.config({path: envPath}).parsed).map(([key, value]) => {
 
     env[key] = value;
 });
+
+env.PROD = process.env.NODE_ENV === 'PROD';
 
 const startup = async () => {
     const app = express();
@@ -40,13 +42,19 @@ const startup = async () => {
 /**
  * Ensure we either do have connection to database or do not have it then start express
  * */
-massive(`postgres://${env.POSTGRES_USER}:${env.POSTGRES_PASS}@${env.POSTGRES_HOST}:${env.POSTGRES_PORT}/${env.POSTGRES_DB}`).then((db) => {
-    global.myDb = db;
+
+if(global.myDb) {
     console.log('connected to db');
-    startup();
-}).catch((error) => {
-    console.error(error);
-    console.log('starting without db');
-    startup();
-});
+    startup()
+} else {
+    massive(`postgres://${env.POSTGRES_USER}:${env.POSTGRES_PASS}@${env.POSTGRES_HOST}:${env.POSTGRES_PORT}/${env.POSTGRES_DB}`).then((db) => {
+        global.myDb = db;
+        console.log('connected to db');
+        startup();
+    }).catch((error) => {
+        console.error(error);
+        console.log('starting without db');
+        startup();
+    });
+}
 

@@ -3,8 +3,16 @@ version: "3"
 services:
   app:
     container_name: app
-    image: registry.digitalocean.com/waterfront/waterfront-service:latest
+    image: registry.gitlab.com/joshuabaert/waterfront/waterfront-service:latest
     restart: always
+    environment:
+      NODE_ENV: PROD
+      SERVER_PORT: ${SERVER_PORT}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST}
     networks:
       - waterfront
     links:

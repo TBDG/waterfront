@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
   push:
@@ -15,7 +15,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: curl
-      run: |-
-        curl -X POST -H 'Content-Type: application/json' -d '{"passPhrase":"${{ secrets.webhookPass }}"}' http://baert.io:${{secrets.webhookPort}}/waterfront
+      - uses: actions/checkout@v2
+      - name: curl
+        run: |-
+          curl -X POST -H 'Content-Type: application/json' -d '{"passPhrase":"${{ secrets.webhookPass }}"}' http://baert.io:${{secrets.webhookPort}}/waterfront
